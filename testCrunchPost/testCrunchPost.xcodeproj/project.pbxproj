@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B3F64651ECCB012006DF37C /* DTOAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F64621ECCB012006DF37C /* DTOAuthClient.m */; };
+		5B3F64661ECCB012006DF37C /* DTOAuthFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F64641ECCB012006DF37C /* DTOAuthFunctions.m */; };
 		B9CF33261ECCA3BD00E42D15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CF33251ECCA3BD00E42D15 /* main.m */; };
 		B9CF33291ECCA3BD00E42D15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CF33281ECCA3BD00E42D15 /* AppDelegate.m */; };
 		B9CF332C1ECCA3BD00E42D15 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CF332B1ECCA3BD00E42D15 /* ViewController.m */; };
@@ -29,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B3F64611ECCB012006DF37C /* DTOAuthClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTOAuthClient.h; sourceTree = "<group>"; };
+		5B3F64621ECCB012006DF37C /* DTOAuthClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTOAuthClient.m; sourceTree = "<group>"; };
+		5B3F64631ECCB012006DF37C /* DTOAuthFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTOAuthFunctions.h; sourceTree = "<group>"; };
+		5B3F64641ECCB012006DF37C /* DTOAuthFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTOAuthFunctions.m; sourceTree = "<group>"; };
 		B9CF33211ECCA3BD00E42D15 /* testCrunchPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testCrunchPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9CF33251ECCA3BD00E42D15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9CF33271ECCA3BD00E42D15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,6 +92,10 @@
 		B9CF33231ECCA3BD00E42D15 /* testCrunchPost */ = {
 			isa = PBXGroup;
 			children = (
+				5B3F64611ECCB012006DF37C /* DTOAuthClient.h */,
+				5B3F64621ECCB012006DF37C /* DTOAuthClient.m */,
+				5B3F64631ECCB012006DF37C /* DTOAuthFunctions.h */,
+				5B3F64641ECCB012006DF37C /* DTOAuthFunctions.m */,
 				B9CF33271ECCA3BD00E42D15 /* AppDelegate.h */,
 				B9CF33281ECCA3BD00E42D15 /* AppDelegate.m */,
 				B9CF334B1ECCA3EB00E42D15 /* WebServiceRequest.h */,
@@ -223,6 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B3F64651ECCB012006DF37C /* DTOAuthClient.m in Sources */,
+				5B3F64661ECCB012006DF37C /* DTOAuthFunctions.m in Sources */,
 				B9CF332C1ECCA3BD00E42D15 /* ViewController.m in Sources */,
 				B9CF33291ECCA3BD00E42D15 /* AppDelegate.m in Sources */,
 				B9CF334D1ECCA3EB00E42D15 /* WebServiceRequest.m in Sources */,
@@ -428,6 +440,7 @@
 				B9CF33451ECCA3BD00E42D15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9CF33461ECCA3BD00E42D15 /* Build configuration list for PBXNativeTarget "testCrunchPostTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +449,7 @@
 				B9CF33481ECCA3BD00E42D15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 #import "WebServiceRequest.h"
+#import "DTOAuthClient.h"
 
 static NSString *const kEndPointForCrunchTransactions = @"https://sandbox.api.crunch.co.uk/rest/v2/expenses";
 
@@ -56,10 +57,6 @@ static NSString *const kEndPointForCrunchTransactions = @"https://sandbox.api.cr
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request addValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
-    [request addValue:@"TBD" forHTTPHeaderField:@"ConsumerKey"];
-    [request addValue:@"b6c1f84a-571d-4f5c-86b6-447802be7070" forHTTPHeaderField:@"ConsumerSecret"];
-    [request addValue:@"9e2b813a-40d8-435a-82d8-91e9f0a3c984" forHTTPHeaderField:@"Token"];
-    [request addValue:@"b6c1f84a-571d-4f5c-86b6-447802be7070" forHTTPHeaderField:@"TokenSecret"];
 
     [request setHTTPMethod:@"POST"];
 
@@ -101,11 +98,18 @@ static NSString *const kEndPointForCrunchTransactions = @"https://sandbox.api.cr
 
         request.HTTPBody = [WebServiceRequest bodyDataForParameters:transactions];
 
+        DTOAuthClient* oauthClient = [[DTOAuthClient alloc] initWithConsumerKeyAndToken:@"TBD"
+                                      consumerSecret:@"b6c1f84a-571d-4f5c-86b6-447802be7070"
+                                      token:@"9e2b813a-40d8-435a-82d8-91e9f0a3c984"
+                                      tokenSecret:@"b6c1f84a-571d-4f5c-86b6-447802be7070"];
+        NSString* oauthHeader = [oauthClient authenticationHeaderForRequest:request];
+        [request addValue:oauthHeader forHTTPHeaderField:@"Authorization"];
+        
         NSLog(@"***********************************************************");
         NSLog(@"%@", request);
 
         NSLog(@"%@", [request allHTTPHeaderFields]);
-
+        
         [WebServiceRequest startRequest:request withHandler:handler];
     }
 }
